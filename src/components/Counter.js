@@ -10,8 +10,8 @@ const Counter = () => {
 
   // react-redux가 제공하는 useSelector hook은, useSelector hook이 사용된 컴포넌트의 subscription을
   // 자동으로 관리하여, 가장 최신(latest)의 state를 반환해주고, unmount시 자동으로 subscription을 clear한다.
-  const counter = useSelector((state) => state.counter);
-  const show = useSelector((state) => state.showCounter);
+  const counter = useSelector((state) => state.counter.counter);
+  const show = useSelector((state) => state.counter.showCounter);
 
   const incrementHandler = () => {
     dispatch(counterActions.increment());
